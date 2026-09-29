@@ -6,6 +6,7 @@ materials: "Steel, fenders, gold anodized components"
 summary: "A celeste and gold road bike with fenders, built for year-round riding."
 coverImage: "./cover.jpg"
 featured: true
+heroDefault: 2
 photos:
   - src: "./01.jpg"
     alt: "Al Nelson's bike, leaning against a concrete wall"
