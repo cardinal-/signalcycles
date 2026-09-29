@@ -5,7 +5,7 @@ type: "City"
 materials: "Steel, step-through frame, custom front rack"
 summary: "A step-through city bike with a custom rack and basket, built in collaboration with Anthropologie."
 coverImage: "./cover.jpg"
-featured: true
+featured: false
 photos:
   - src: "./01.jpg"
     alt: "Picnic Bike, full profile"

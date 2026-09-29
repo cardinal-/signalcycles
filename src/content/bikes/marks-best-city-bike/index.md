@@ -1,6 +1,6 @@
 ---
 name: "Mark's Best City Bike"
-year: 2011
+year: 2010
 type: "City / Singlespeed"
 materials: "Stainless steel, lugged, nickel-plated brushed stem"
 summary: "A stainless lugged singlespeed town cruiser, winner of NAHBS Best City Bike."
@@ -8,15 +8,21 @@ coverImage: "./cover.jpg"
 featured: true
 photos:
   - src: "./01.jpg"
-    alt: "Mark's Best City Bike, full profile"
+    alt: "Mark K's townie, full profile"
   - src: "./02.jpg"
-    alt: "Mark's Best City Bike, lug detail"
+    alt: "Mark K's townie, ready for a ride"
   - src: "./03.jpg"
-    alt: "Mark's Best City Bike, stem detail"
+    alt: "Nickel-plated stem detail"
   - src: "./04.jpg"
-    alt: "Mark's Best City Bike, drivetrain"
+    alt: "Edelux headlight detail"
   - src: "./05.jpg"
-    alt: "Mark's Best City Bike, at NAHBS"
+    alt: "Brushed stainless lug detail"
+  - src: "./06.jpg"
+    alt: "Fluxed seat tube before brazing"
+  - src: "./07.jpg"
+    alt: "Seatpost clamp detail"
+  - src: "./08.jpg"
+    alt: "Frame detail"
 ---
 
 This is placeholder copy for Mark's Best City Bike. Replace with the real story: the
