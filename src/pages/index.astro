@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BikeCard from '../components/BikeCard.astro';
+import { getCollection } from 'astro:content';
+
+const bikes = await getCollection('bikes');
+const featured = bikes.filter((b) => b.data.featured).slice(0, 3);
+---
+
+<Layout title="Home">
+  <section class="hero">
+    <h1>Steel bicycles built with purpose.</h1>
+    <p>
+      Signal Cycles was a bicycle fabrication company run by Matt Cardinal and Nate
+      Meschke in Portland, Oregon, from 2007 to 2017. Every frame was built by hand,
+      one at a time.
+    </p>
+    <a class="button" href="/gallery">View the gallery</a>
+  </section>
+
+  <section>
+    <h2>Featured bikes</h2>
+    <div class="bike-grid">
+      {
+        featured.map((bike) => (
+          <BikeCard
+            slug={bike.id}
+            name={bike.data.name}
+            year={bike.data.year}
+            type={bike.data.type}
+            coverImage={bike.data.coverImage}
+          />
+        ))
+      }
+    </div>
+  </section>
+</Layout>

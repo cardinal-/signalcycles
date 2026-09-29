@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  slug: string;
+  name: string;
+  year: number;
+  type: string;
+  coverImage: ImageMetadata;
+}
+
+const { slug, name, year, type, coverImage } = Astro.props;
+---
+
+<a class="bike-card" href={`/gallery/${slug}`}>
+  <Image src={coverImage} alt={name} width={600} height={400} />
+  <div class="meta">
+    <h3>{name}</h3>
+    <p class="sub">{year} &middot; {type}</p>
+  </div>
+</a>

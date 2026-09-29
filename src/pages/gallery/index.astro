@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BikeCard from '../../components/BikeCard.astro';
+import { getCollection } from 'astro:content';
+
+const bikes = (await getCollection('bikes')).sort((a, b) => b.data.year - a.data.year);
+---
+
+<Layout title="Gallery" description="Every bike built by Signal Cycles, 2007–2017.">
+  <section class="hero">
+    <h1>Gallery</h1>
+    <p>Every bike we've added so far. Click through for the full photo set on each one.</p>
+  </section>
+
+  <div class="bike-grid">
+    {
+      bikes.map((bike) => (
+        <BikeCard
+          slug={bike.id}
+          name={bike.data.name}
+          year={bike.data.year}
+          type={bike.data.type}
+          coverImage={bike.data.coverImage}
+        />
+      ))
+    }
+  </div>
+</Layout>

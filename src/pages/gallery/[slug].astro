@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+
+export async function getStaticPaths() {
+  const bikes = await getCollection('bikes');
+  return bikes.map((bike) => ({
+    params: { slug: bike.id },
+    props: { bike },
+  }));
+}
+
+const { bike } = Astro.props;
+const { name, year, type, materials, photos } = bike.data;
+const { Content } = await render(bike);
+---
+
+<Layout title={name} description={bike.data.summary}>
+  <div class="bike-header">
+    <h1>{name}</h1>
+    <p class="sub">
+      {year} &middot; {type}
+      {materials && <> &middot; {materials}</>}
+    </p>
+  </div>
+
+  <div class="prose">
+    <Content />
+  </div>
+
+  <div class="photo-grid">
+    {
+      photos.map((photo) => (
+        <Image src={photo.src} alt={photo.alt} width={800} height={533} />
+      ))
+    }
+  </div>
+
+  <a class="back-link" href="/gallery">&larr; Back to gallery</a>
+</Layout>
