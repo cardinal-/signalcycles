@@ -195,6 +195,11 @@ p {
   padding: 4rem 0 3rem;
   margin-bottom: 3rem;
   border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease;
 }
 
 .hero-block .eyebrow {

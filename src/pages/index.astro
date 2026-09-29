@@ -2,13 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import BikeCard from '../components/BikeCard.astro';
 import { getCollection } from 'astro:content';
+import { getImage } from 'astro:assets';
+import mattPhoto from '../assets/hero/matt.jpg';
+import natePhoto from '../assets/hero/nate.jpg';
 
 const bikes = await getCollection('bikes');
 const featured = bikes.filter((b) => b.data.featured).slice(0, 4);
+
+const heroPhotos = await Promise.all(
+  [mattPhoto, natePhoto].map((src) => getImage({ src, width: 2000, format: 'webp' })),
+);
+const heroPhotoUrls = JSON.stringify(heroPhotos.map((img) => img.src));
 ---
 
 <Layout title="Home">
-  <section class="hero-block">
+  <section class="hero-block" data-hero-photos={heroPhotoUrls}>
     <div class="wrap">
       <span class="eyebrow">Portland, Oregon &middot; 2007&ndash;2017</span>
       <h1>Steel bicycles built with purpose.</h1>
@@ -41,3 +49,14 @@ const featured = bikes.filter((b) => b.data.featured).slice(0, 4);
     </div>
   </section>
 </Layout>
+
+<script>
+  const heroBlock = document.querySelector<HTMLElement>('[data-hero-photos]');
+  if (heroBlock) {
+    const photos: string[] = JSON.parse(heroBlock.dataset.heroPhotos ?? '[]');
+    const chosen = photos[Math.floor(Math.random() * photos.length)];
+    if (chosen) {
+      heroBlock.style.backgroundImage = `linear-gradient(rgba(16, 20, 28, 0.86), rgba(16, 20, 28, 0.86)), url(${chosen})`;
+    }
+  }
+</script>
