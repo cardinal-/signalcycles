@@ -28,6 +28,8 @@ photos:
     alt: "Rear rack and disc brake detail"
   - src: "./10.jpg"
     alt: "Front rack and fork crown detail"
+  - src: "./11.jpg"
+    alt: "Making the head tube sleeve"
 ---
 
 This is placeholder copy for Ashley's Mixtie. Replace with the real story: why a
