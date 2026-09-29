@@ -214,7 +214,8 @@ p {
 }
 
 .hero:not(.hero-block) {
-  padding: 3rem 0 2rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 .hero:not(.hero-block) h1 {
