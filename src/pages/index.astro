@@ -4,7 +4,7 @@ import BikeCard from '../components/BikeCard.astro';
 import { getCollection } from 'astro:content';
 
 const bikes = await getCollection('bikes');
-const featured = bikes.filter((b) => b.data.featured).slice(0, 3);
+const featured = bikes.filter((b) => b.data.featured).slice(0, 4);
 ---
 
 <Layout title="Home">
