@@ -1,10 +1,13 @@
 ---
+import Logo from './Logo.astro';
 ---
 
 <div class="site-nav-bar">
   <header class="wrap">
     <nav class="site-nav">
-      <a class="brand" href="/">Signal Cycles</a>
+      <a class="brand" href="/" aria-label="Signal Cycles">
+        <Logo class="brand-logo" />
+      </a>
       <ul>
         <li><a href="/gallery">Gallery</a></li>
         <li><a href="/story">Story</a></li>

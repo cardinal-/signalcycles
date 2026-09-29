@@ -135,11 +135,20 @@ p {
 }
 
 .site-nav .brand {
-  font-style: italic;
-  font-weight: 600;
-  font-size: var(--text-md);
-  text-decoration: none;
+  display: block;
+  line-height: 0;
   color: var(--color-text-bright);
+}
+
+.site-nav .brand:hover {
+  color: var(--color-text);
+}
+
+.brand-logo {
+  display: block;
+  height: 1.75rem;
+  width: auto;
+  aspect-ratio: 350 / 107;
 }
 
 .site-nav ul {
