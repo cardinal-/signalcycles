@@ -26,7 +26,6 @@ const bikes = (await getCollection('bikes')).sort((a, b) => b.data.year - a.data
             year={bike.data.year}
             type={bike.data.type}
             coverImage={bike.data.coverImage}
-            accent={bike.data.accent}
             index={index}
           />
         ))

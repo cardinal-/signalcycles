@@ -11,14 +11,9 @@ export async function getStaticPaths() {
   }));
 }
 
-const ACCENT_ROTATION = ['ochre', 'burnt-orange', 'chocolate', 'powder-blue'] as const;
-
 const { bike } = Astro.props;
-const { name, year, type, materials, coverImage, photos, accent } = bike.data;
+const { name, year, type, materials, coverImage, photos } = bike.data;
 const { Content } = await render(bike);
-
-const hash = [...bike.id].reduce((sum, char) => sum + char.charCodeAt(0), 0);
-const resolvedAccent = accent ?? ACCENT_ROTATION[hash % ACCENT_ROTATION.length];
 ---
 
 <Layout title={name} description={bike.data.summary}>
@@ -26,7 +21,7 @@ const resolvedAccent = accent ?? ACCENT_ROTATION[hash % ACCENT_ROTATION.length];
     <Image src={coverImage} alt={name} width={1600} height={900} />
   </div>
 
-  <div class:list={['spec-strip', `accent-${resolvedAccent}`]}>
+  <div class="spec-strip">
     <div class="wrap">
       <h1>{name}</h1>
       <div class="specs">

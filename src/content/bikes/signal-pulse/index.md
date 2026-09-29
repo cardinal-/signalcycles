@@ -6,7 +6,6 @@ materials: "Steel, TIG-welded, fender-ready"
 summary: "A production road frame built for everyday riding in wet, hilly terrain."
 coverImage: "./cover.jpg"
 featured: true
-accent: "burnt-orange"
 photos:
   - src: "./01.jpg"
     alt: "Signal Pulse, three-quarter view"

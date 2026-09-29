@@ -7,14 +7,10 @@ interface Props {
   year: number;
   type: string;
   coverImage: ImageMetadata;
-  accent?: 'ochre' | 'burnt-orange' | 'chocolate' | 'powder-blue';
   index?: number;
 }
 
-const ACCENT_ROTATION = ['ochre', 'burnt-orange', 'chocolate', 'powder-blue'] as const;
-
-const { slug, name, year, type, coverImage, accent, index = 0 } = Astro.props;
-const resolvedAccent = accent ?? ACCENT_ROTATION[index % ACCENT_ROTATION.length];
+const { slug, name, year, type, coverImage, index = 0 } = Astro.props;
 ---
 
 <a class="bike-card" href={`/gallery/${slug}`}>
@@ -22,7 +18,7 @@ const resolvedAccent = accent ?? ACCENT_ROTATION[index % ACCENT_ROTATION.length]
     <span class="num">{String(index + 1).padStart(2, '0')}</span>
     <Image src={coverImage} alt={name} width={600} height={450} />
   </div>
-  <div class:list={['meta', `accent-${resolvedAccent}`]}>
+  <div class="meta">
     <h3>{name}</h3>
     <p class="sub">{year} &middot; {type}</p>
   </div>

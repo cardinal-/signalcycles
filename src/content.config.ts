@@ -20,7 +20,6 @@ const bikes = defineCollection({
         )
         .default([]),
       featured: z.boolean().default(false),
-      accent: z.enum(['ochre', 'burnt-orange', 'chocolate', 'powder-blue']).optional(),
     }),
 });
 
