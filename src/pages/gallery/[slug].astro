@@ -12,13 +12,37 @@ export async function getStaticPaths() {
 }
 
 const { bike } = Astro.props;
-const { name, year, type, materials, coverImage, photos } = bike.data;
+const { name, year, type, materials, photos } = bike.data;
 const { Content } = await render(bike);
+const heroSlides = photos.length > 0 ? photos : [{ src: bike.data.coverImage, alt: name }];
 ---
 
 <Layout title={name} description={bike.data.summary}>
-  <div class="bike-hero">
-    <Image src={coverImage} alt={name} width={1600} height={900} />
+  <div class="bike-hero" data-hero-slider>
+    {
+      heroSlides.map((photo, i) => (
+        <Image
+          src={photo.src}
+          alt={photo.alt}
+          width={1600}
+          height={900}
+          class={i === 0 ? 'active' : ''}
+          data-index={i}
+        />
+      ))
+    }
+    {
+      heroSlides.length > 1 && (
+        <>
+          <button type="button" class="hero-nav prev" aria-label="Previous photo">
+            &lsaquo;
+          </button>
+          <button type="button" class="hero-nav next" aria-label="Next photo">
+            &rsaquo;
+          </button>
+        </>
+      )
+    }
   </div>
 
   <div class="spec-strip">
@@ -61,3 +85,22 @@ const { Content } = await render(bike);
     <a class="back-link" href="/gallery">&larr; Back to gallery</a>
   </div>
 </Layout>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-hero-slider]').forEach((slider) => {
+    const images = Array.from(slider.querySelectorAll<HTMLImageElement>('img'));
+    if (images.length < 2) return;
+
+    let current = images.findIndex((img) => img.classList.contains('active'));
+    if (current < 0) current = 0;
+
+    const show = (index: number) => {
+      images[current].classList.remove('active');
+      current = (index + images.length) % images.length;
+      images[current].classList.add('active');
+    };
+
+    slider.querySelector('.prev')?.addEventListener('click', () => show(current - 1));
+    slider.querySelector('.next')?.addEventListener('click', () => show(current + 1));
+  });
+</script>

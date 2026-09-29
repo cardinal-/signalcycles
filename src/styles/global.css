@@ -339,14 +339,57 @@ p {
 /* ---- bike detail page ---- */
 
 .bike-hero {
+  position: relative;
   margin: 0 0 0;
   background: var(--color-bg-raised);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
 
 .bike-hero img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.bike-hero img.active {
+  opacity: 1;
+}
+
+.hero-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--color-text-bright);
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.28;
+  transition: opacity 0.2s ease;
+}
+
+.hero-nav:hover,
+.hero-nav:focus-visible {
+  opacity: 0.85;
+}
+
+.hero-nav.prev {
+  left: 0;
+}
+
+.hero-nav.next {
+  right: 0;
 }
 
 .spec-strip {
