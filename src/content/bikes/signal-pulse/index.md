@@ -5,7 +5,7 @@ type: "Road"
 materials: "Steel, Dura-Ace build, carbon wheels"
 summary: "A production road frame built for everyday riding in wet, hilly terrain."
 coverImage: "./cover.jpg"
-featured: false
+featured: true
 photos:
   - src: "./01.jpg"
     alt: "Signal Pulse, full side profile in the studio"
