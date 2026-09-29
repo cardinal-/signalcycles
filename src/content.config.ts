@@ -20,6 +20,7 @@ const bikes = defineCollection({
         )
         .default([]),
       featured: z.boolean().default(false),
+      heroDefault: z.number().int().positive().optional(),
     }),
 });
 
