@@ -24,6 +24,10 @@ the camera or wherever they're stored.
 `featured: true` in a bike's frontmatter puts it in the "Featured bikes" section on
 the home page.
 
+`accent` sets the color block used on that bike's card and detail page — one of
+`ochre`, `burnt-orange`, `chocolate`, or `powder-blue`. It's optional; bikes without
+one get a color assigned automatically based on their position in the list.
+
 ## Commands
 
 Run from the project root:

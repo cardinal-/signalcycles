@@ -8,27 +8,34 @@ const featured = bikes.filter((b) => b.data.featured).slice(0, 3);
 ---
 
 <Layout title="Home">
-  <section class="hero">
-    <h1>Steel bicycles built with purpose.</h1>
-    <p>
-      Signal Cycles was a bicycle fabrication company run by Matt Cardinal and Nate
-      Meschke in Portland, Oregon, from 2007 to 2017. Every frame was built by hand,
-      one at a time.
-    </p>
-    <a class="button" href="/gallery">View the gallery</a>
+  <section class="hero-block">
+    <div class="wrap">
+      <span class="eyebrow">Portland, Oregon &middot; 2007&ndash;2017</span>
+      <h1>Steel bicycles built with purpose.</h1>
+      <p>
+        Signal Cycles was a bicycle fabrication company run by Matt Cardinal and Nate
+        Meschke. Every frame was built by hand, one at a time.
+      </p>
+      <a class="button" href="/gallery">View the gallery</a>
+    </div>
   </section>
 
-  <section>
-    <h2>Featured bikes</h2>
+  <section class="wrap">
+    <div class="section-head">
+      <h2>Featured bikes</h2>
+      <span class="count">{String(featured.length).padStart(2, '0')} shown</span>
+    </div>
     <div class="bike-grid">
       {
-        featured.map((bike) => (
+        featured.map((bike, index) => (
           <BikeCard
             slug={bike.id}
             name={bike.data.name}
             year={bike.data.year}
             type={bike.data.type}
             coverImage={bike.data.coverImage}
+            accent={bike.data.accent}
+            index={index}
           />
         ))
       }

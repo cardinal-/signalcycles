@@ -11,31 +11,58 @@ export async function getStaticPaths() {
   }));
 }
 
+const ACCENT_ROTATION = ['ochre', 'burnt-orange', 'chocolate', 'powder-blue'] as const;
+
 const { bike } = Astro.props;
-const { name, year, type, materials, photos } = bike.data;
+const { name, year, type, materials, coverImage, photos, accent } = bike.data;
 const { Content } = await render(bike);
+
+const hash = [...bike.id].reduce((sum, char) => sum + char.charCodeAt(0), 0);
+const resolvedAccent = accent ?? ACCENT_ROTATION[hash % ACCENT_ROTATION.length];
 ---
 
 <Layout title={name} description={bike.data.summary}>
-  <div class="bike-header">
-    <h1>{name}</h1>
-    <p class="sub">
-      {year} &middot; {type}
-      {materials && <> &middot; {materials}</>}
-    </p>
+  <div class="bike-hero">
+    <Image src={coverImage} alt={name} width={1600} height={900} />
   </div>
 
-  <div class="prose">
-    <Content />
+  <div class:list={['spec-strip', `accent-${resolvedAccent}`]}>
+    <div class="wrap">
+      <h1>{name}</h1>
+      <div class="specs">
+        <div class="spec">
+          <span class="label">Year</span>
+          <span class="value">{year}</span>
+        </div>
+        <div class="spec">
+          <span class="label">Type</span>
+          <span class="value">{type}</span>
+        </div>
+        {materials && (
+          <div class="spec">
+            <span class="label">Materials</span>
+            <span class="value">{materials}</span>
+          </div>
+        )}
+      </div>
+    </div>
   </div>
 
-  <div class="photo-grid">
-    {
-      photos.map((photo) => (
-        <Image src={photo.src} alt={photo.alt} width={800} height={533} />
-      ))
-    }
+  <div class="wrap">
+    <div class="prose">
+      <Content />
+    </div>
   </div>
 
-  <a class="back-link" href="/gallery">&larr; Back to gallery</a>
+  <div class="wrap">
+    <div class="photo-grid">
+      {
+        photos.map((photo) => (
+          <Image src={photo.src} alt={photo.alt} width={800} height={533} />
+        ))
+      }
+    </div>
+
+    <a class="back-link" href="/gallery">&larr; Back to gallery</a>
+  </div>
 </Layout>

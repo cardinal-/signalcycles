@@ -7,22 +7,30 @@ const bikes = (await getCollection('bikes')).sort((a, b) => b.data.year - a.data
 ---
 
 <Layout title="Gallery" description="Every bike built by Signal Cycles, 2007–2017.">
-  <section class="hero">
+  <section class="hero wrap">
     <h1>Gallery</h1>
     <p>Every bike we've added so far. Click through for the full photo set on each one.</p>
   </section>
 
-  <div class="bike-grid">
-    {
-      bikes.map((bike) => (
-        <BikeCard
-          slug={bike.id}
-          name={bike.data.name}
-          year={bike.data.year}
-          type={bike.data.type}
-          coverImage={bike.data.coverImage}
-        />
-      ))
-    }
+  <div class="wrap">
+    <div class="section-head">
+      <h2>All bikes</h2>
+      <span class="count">{String(bikes.length).padStart(2, '0')} models</span>
+    </div>
+    <div class="bike-grid">
+      {
+        bikes.map((bike, index) => (
+          <BikeCard
+            slug={bike.id}
+            name={bike.data.name}
+            year={bike.data.year}
+            type={bike.data.type}
+            coverImage={bike.data.coverImage}
+            accent={bike.data.accent}
+            index={index}
+          />
+        ))
+      }
+    </div>
   </div>
 </Layout>
