@@ -5,7 +5,7 @@ type: "City / Singlespeed"
 materials: "Stainless steel, lugged, nickel-plated brushed stem"
 summary: "A stainless lugged singlespeed town cruiser, winner of NAHBS Best City Bike."
 coverImage: "./cover.jpg"
-featured: true
+featured: false
 photos:
   - src: "./01.jpg"
     alt: "Mark K's townie, full profile"
