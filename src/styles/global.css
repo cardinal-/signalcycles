@@ -1,11 +1,24 @@
 :root {
-  /* colors */
-  --color-bg: #161b24;
-  --color-bg-raised: #1c2330;
-  --color-text: #a9c2d6;
-  --color-text-bright: #d3e2ee;
-  --color-muted: #6c7f92;
-  --color-border: #2a3242;
+  /* blue scale */
+  --color-blue-50: #eff1f6;
+  --color-blue-100: #dfe2ed;
+  --color-blue-200: #c2c9dd;
+  --color-blue-300: #a2aecd;
+  --color-blue-400: #8293bc;
+  --color-blue-500: #6a7ca5;
+  --color-blue-600: #556385;
+  --color-blue-700: #404b66;
+  --color-blue-800: #2c3548;
+  --color-blue-900: #1b212f;
+  --color-blue-950: #0f131d;
+
+  /* semantic colors */
+  --color-bg: var(--color-blue-950);
+  --color-bg-raised: var(--color-blue-900);
+  --color-text: var(--color-blue-300);
+  --color-text-bright: var(--color-blue-100);
+  --color-muted: var(--color-blue-600);
+  --color-border: var(--color-blue-800);
 
   /* type */
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
