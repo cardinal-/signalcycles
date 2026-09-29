@@ -290,6 +290,8 @@ p {
 }
 
 .bike-card img {
+  width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   filter: grayscale(0.15);
@@ -454,9 +456,10 @@ p {
 }
 
 .photo-grid img {
+  width: 100%;
+  height: auto;
   aspect-ratio: 3 / 2;
   object-fit: cover;
-  width: 100%;
   background: var(--color-bg-raised);
 }
 
