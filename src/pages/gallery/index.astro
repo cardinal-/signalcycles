@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 const bikes = (await getCollection('bikes')).sort((a, b) => b.data.year - a.data.year);
 ---
 
-<Layout title="Gallery" description="Every bike built by Signal Cycles, 2007–2017.">
+<Layout title="Gallery" description="Every bike built by Signal Cycles, 2007–2018.">
   <section class="hero wrap">
     <h1>Gallery</h1>
     <p>Every bike we've added so far. Click through for the full photo set on each one.</p>

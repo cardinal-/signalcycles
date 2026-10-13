@@ -1,7 +1,7 @@
 # Signal Cycles
 
 A gallery site for Signal Cycles, the handmade bicycle company Matt Cardinal and Nate
-Meschke ran in Portland, Oregon from 2007 to 2017. Built with [Astro](https://astro.build).
+Meschke ran in Portland, Oregon from 2007 to 2018. Built with [Astro](https://astro.build).
 
 ## Adding a bike
 
