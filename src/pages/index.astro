@@ -34,7 +34,7 @@ const heroPhotoUrls = JSON.stringify(heroPhotos.map((img) => img.src));
       <h2>Featured bikes</h2>
       <span class="count">{String(featured.length).padStart(2, '0')} shown</span>
     </div>
-    <div class="bike-grid">
+    <div class="bike-grid bike-grid--two">
       {
         featured.map((bike, index) => (
           <BikeCard
