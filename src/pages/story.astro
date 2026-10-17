@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import shopPhoto from '../content/bikes/shop/Matt-Nate-BW.png';
 ---
 
 <Layout title="Story" description="The story of Signal Cycles, 2007–2018.">
@@ -7,7 +9,7 @@ import Layout from '../layouts/Layout.astro';
     <h1>The Signal Cycles story</h1>
   </section>
 
-  <div class="wrap">
+  <div class="wrap story-layout">
     <div class="prose">
       <p>
         Signal Cycles started in the fall of 2007 in a small garage in North
@@ -45,5 +47,13 @@ import Layout from '../layouts/Layout.astro';
         a time.
       </p>
     </div>
+    <figure class="story-photo">
+      <Image
+        src={shopPhoto}
+        alt="Matt Cardinal and Nate Meschke in the Signal Cycles workshop"
+        width={800}
+        sizes="(max-width: 800px) 100vw, 400px"
+      />
+    </figure>
   </div>
 </Layout>

@@ -482,6 +482,38 @@ p {
   margin-bottom: 1.2em;
 }
 
+.story-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.story-layout .prose {
+  max-width: none;
+}
+
+.story-photo {
+  margin: 2.5rem 0;
+}
+
+.story-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 800px) {
+  .story-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .story-photo {
+    margin-top: 0;
+  }
+}
+
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
