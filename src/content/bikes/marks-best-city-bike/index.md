@@ -1,6 +1,6 @@
 ---
 name: "Mark's Best City Bike"
-year: 2010
+year: 2011
 type: "City / Singlespeed"
 materials: "Stainless steel, lugged, nickel-plated brushed stem"
 summary: "A stainless lugged singlespeed town cruiser, winner of NAHBS Best City Bike."
@@ -25,6 +25,4 @@ photos:
     alt: "Frame detail"
 ---
 
-This is placeholder copy for Mark's Best City Bike. Replace with the real story: the
-NAHBS Austin show, what went into the stainless lugwork, and why this one won Best
-City Bike.
+This singlespeed bicycle featured brushed stainless lugs and a custom nickel plated stem won best city bike at the 2011 North American Handmade Bicycle Show in Austin, Texas.

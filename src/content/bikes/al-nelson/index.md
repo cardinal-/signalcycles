@@ -3,7 +3,7 @@ name: "Al Nelson"
 year: 2014
 type: "Road"
 materials: "Steel, fenders, gold anodized components"
-summary: "A celeste and gold road bike with fenders, built for year-round riding."
+summary: "A fendered road bike in a golden hour paint job, with Gold King components and a lot of quiet details."
 coverImage: "./cover.jpg"
 featured: true
 heroDefault: 2
@@ -34,6 +34,4 @@ photos:
     alt: "Studio shot, rear three-quarter view"
 ---
 
-This is placeholder copy for Al Nelson's bike. Replace with the real story: what Al
-was looking for, why the celeste-and-gold paint scheme, and any details worth calling
-out about the build.
+Al's fendered road bike painted in a golden hour paint job. This is a beautiful example of a bike that looks simple, but has a lot of details. The unicrown steel fork has the brake positioned to maximize tire and fender clearance without requiring a long-reach caliper. The rear bridge puts the rear brake in a similar, maximized height. Gold King components contrast nicely with the other charcoal and black anodized parts.

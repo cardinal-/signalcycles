@@ -32,6 +32,4 @@ photos:
     alt: "Making the head tube sleeve"
 ---
 
-This is placeholder copy for Ashley's Mixtie. Replace with the real story: why a
-mixte frame, what the 650b wheel size was chosen for, and what went into the racks
-and fenders.
+This beautiful step-through frame is loaded. Built for big city life with front and rear racks that feature removable cages. The owner commissioned the bike to be able to carry their small dog on the rear rack. The frame is a bi-laminate design with a custom headtube, hand bent twin toptubes that flow into the rear rack. The internal gears and disc brakes mean this bike needs very minimal service. The dynamo front hub powers an LED front light to keep visibility up.

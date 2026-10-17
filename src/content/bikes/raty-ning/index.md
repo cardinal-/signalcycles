@@ -1,9 +1,9 @@
 ---
 name: "Raty Ning"
 year: 2012
-type: "Touring"
-materials: "Steel, lugged, Paul Components, generator light, rack and fenders"
-summary: "A cherry-red lugged touring bike with a rear rack, fenders, and a generator headlight."
+type: "City"
+materials: "Steel, lugged, Paul Components, front dynamo hub, rack and fenders"
+summary: "A cherry-red lugged city bike with a rear rack, fenders, and a front dynamo hub light."
 coverImage: "./cover.jpg"
 featured: false
 photos:
@@ -35,6 +35,4 @@ photos:
     alt: "Brazing the frame"
 ---
 
-This is placeholder copy for Raty's bike. Replace with the real story: what Raty
-needed from a touring build, why the lugged construction, and what makes this one
-worth calling out.
+If you are on the streets of Jakarta, keep your eyes peeled for this beautiful city bike. It's a classic with Paul cantilever brakes, custom Signal stem, rear rack and front light mount. Shifting is kept simple with downtube shifters.

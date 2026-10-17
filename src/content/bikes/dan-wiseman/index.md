@@ -31,6 +31,4 @@ photos:
     alt: "Dan Wiseman's bike, in progress"
 ---
 
-This is placeholder copy for Dan Wiseman's bike. Replace with the real story: what
-Dan was looking for, why the black-and-gold scheme, and what makes this build worth
-calling out.
+This black and gold stunner features a 1x drivetrain and a built to match steel stem. Disc brakes make room for big tires and fenders easy. This bike was way ahead of its time in 2014 and would now very much be considered the prototypical gravel bike.

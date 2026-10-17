@@ -25,6 +25,4 @@ photos:
     alt: "Signal Pulse, dropout detail"
 ---
 
-This is placeholder copy for the Signal Pulse. Replace with the real story: how this
-model came about, what made it different from a one-off custom frame, and any details
-worth calling out (geometry choices, why steel, what riders it was built for).
+The Pulse road bike was Signal's attempt at offering an American made stock geometry road bike. These Columbus tubed machines were awarded a Bicycling Magazine's editor's choice award. Full Shimano drivetrains and Thomson and King components to keep the quality bar as high as possible.

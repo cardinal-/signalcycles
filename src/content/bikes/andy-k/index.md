@@ -33,6 +33,4 @@ photos:
     alt: "Modified head lug detail"
 ---
 
-This is placeholder copy for Andy K's bike. Replace with the real story: what Andy
-needed from a daily commuter, why stainless, and what makes the lugwork on this one
-special.
+This powder blue city bike is packed with custom touches. Custom rack, stem and light mount keep it classy and functional. Lugged frame with internal brake routing and Paul Racer brakes and a dynamo powered front light.
