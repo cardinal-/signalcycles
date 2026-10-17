@@ -9,13 +9,15 @@ const bikes = (await getCollection('bikes')).sort((a, b) => b.data.year - a.data
 <Layout title="Gallery" description="Every bike built by Signal Cycles, 2007–2018.">
   <section class="hero wrap">
     <h1>Gallery</h1>
-    <p>Every bike we've added so far. Click through for the full photo set on each one.</p>
+    <p>
+      These are just a handful of the bikes that Signal produced. Each has a small gallery of
+      photos and a short description of the project.
+    </p>
   </section>
 
   <div class="wrap">
     <div class="section-head">
       <h2>All bikes</h2>
-      <span class="count">{String(bikes.length).padStart(2, '0')} models</span>
     </div>
     <div class="bike-grid">
       {

@@ -263,13 +263,6 @@ p {
   margin-bottom: 0;
 }
 
-.section-head .count {
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-muted);
-}
-
 /* ---- bike grid / catalog cards ---- */
 
 .bike-grid {
