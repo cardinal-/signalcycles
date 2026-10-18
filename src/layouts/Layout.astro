@@ -12,6 +12,9 @@ const {
   title,
   description = 'Signal Cycles — steel bicycles that love you back. Portland, Oregon, 2007–2018.',
 } = Astro.props;
+
+// Only track production builds, not local dev.
+const gaId = import.meta.env.PROD ? 'G-YGHMN9BJG4' : undefined;
 ---
 
 <!doctype html>
@@ -29,6 +32,21 @@ const {
       rel="stylesheet"
     />
     <title>{title} · Signal Cycles</title>
+    {
+      gaId && (
+        <>
+          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
+          <script is:inline define:vars={{ gaId }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', gaId);
+          </script>
+        </>
+      )
+    }
   </head>
   <body>
     <Nav />
